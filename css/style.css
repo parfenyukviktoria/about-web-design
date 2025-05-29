@@ -1,43 +1,309 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-    background-color: rgba(255, 208, 0, 0.836);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+  font-family: arial;
+  font-size: 18px;
+  background-color: #323660;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  overflow-x: hidden;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  height: 100vh;
 }
 
 .container {
-    background-color: rgb(248, 166, 166);
-    width: 300px;
-    height: 450px;
-    overflow-y: scroll;
-    border: 9px solid #5a035a65;
-    border-radius: 15px;
-    box-shadow: 10px 10px 20px #550369f1;
-    transition: all 2s ease;
+  background-color: #596696;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+  overflow-y: scroll;
+  border: 15px solid #0b0b10;
+  border-radius: 20px;
+  box-shadow: 0px 0px 50px #33002240;
+  transition: all 0.5s ease;
 }
 
 .container:hover {
-    box-shadow: 15px 15px 25px #4c028a;
-}
-
-h2 {
-    text-align: center;
-    font-weight: bold;
+  box-shadow: 0px 0px 50px #330022;
 }
 
 .image_container {
-    text-align: center;
+  text-align: center;
 }
 
 .image_container img {
-    width: 50px;
-    height: auto;
+  width: 128px;
+  height: 128px;
+  border-radius: 20px;
 }
 
-.more_info {
-    text-align: center;
-    font-size: 20px;
-    font-weight: 900;
+h2 {
+ text-align: center;
+}
+
+/* Секція пояснення тегів */
+.tags {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+  height: 100vh;
+}
+
+.tag-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  width: 60%;
+  background-color: #7a8484;
+  border-radius: 10px;
+}
+
+.tag-title {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  width: 100px;
+  line-height: 100px;
+  height: 100px;
+  border: #330022 solid 2px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+/* Анімація  появи пояснень тегів */
+.tag-container:hover .tag-description {
+    display: inline-block;
+    animation: slideInFromRight 0.5s ease-out;
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+.tag-description {
+    display: none;
+    text-align: left;
+}
+
+/* Секція про вебдизайн - вітальна з відео */
+.welcome {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  color: #3d4c44;
+  text-align: center;
+  font-size: 120px;
+}
+
+.site-footer {
+  background-color: #2c2c2c;
+  color: #fff;
+  padding: 40px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-logo, .footer-links, .footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links ul li {
+  margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.footer-links ul li a:hover {
+  color: #fff;
+}
+
+.footer-social a {
+  margin-right: 10px;
+  display: inline-block;
+}
+
+.footer-social img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+/*Секція футер – з навігацією, контактами та короткою інформацією про сайт*/
+
+footer {
+  width: 100%;
+  background: #2d4c3a;
+  color: #d8fff1;
+  margin-top: 40px;
+  box-shadow: 0 -4px 24px #32594b60;
+  font-size: 18px;
+  letter-spacing: 0.2px;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 60px;
+  padding: 40px 0 10px 0;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.footer-block {
+  min-width: 220px;
+  max-width: 320px;
+}
+
+.footer-block h3 {
+  color: #c4e9db;
+  margin-bottom: 12px;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.footer-block ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-block ul li {
+ margin-bottom: 8px;
+ color: #d8fff1
+}
+
+.footer-block a {
+  color: #d8fff1;
+  text-decoration: underline dotted;
+  transition: color 0.2s;
+}
+
+.footer-block a:hover {
+  color: #84b780;
+}
+
+.footer-block p {
+  color: #d8fff1;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid #84b780;
+  margin-top: 20px;
+  padding: 12px 0 8px 0;
+  font-size: 16px;
+  color: #c4e9db;
+  background: #294334;
+}
+
+/* Секція з навігацією */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 60px;
+    background: #29433496;
+    color: #d8fff1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 2px 12px #29433460;
+    padding: 0 40px;
+    backdrop-filter: blur(4px);
+}
+
+.nav-logo {
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #84b780;
+}
+
+.nav-links {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+.nav-links li a {
+    color: #d8fff1;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+
+.nav-links li a:hover,
+.nav-links li a:focus {
+    background: #84b780;
+    color: #294334;
 }

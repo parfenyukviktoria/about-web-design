@@ -1,10 +1,20 @@
 <html>
 <head>
-  <title>Парфенюк про веб дизайн</title>
+  <title>Парфенюк flexbox</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
 
+<section class="welcome">
+  <video autoplay muted loop playsinline class="background-video">
+    <source src="video/intro.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+  <h1 class="content">Коротко про вебдизайн</h1>
+</section>
+
+
+<body>
+  <section>
   <div class="container">
     <div class="image_container">
       <img src="img/html.png" alt="HTML" />
@@ -47,6 +57,95 @@ JavaScript класифікують як прототипну (підмножи�
     </p>
     <a href="https://uk.wikipedia.org/wiki/JavaScript" class="more_info" target="_blank">Детальніше</a>
   </div>
+</section>
 
-</body>
+
+<section class="tags">
+        <h2>Теги</h2>
+        <div class="tag-container">
+            <div class="tag-title">html</div>
+            <div class="tag-description">Визначає початок та закінчення веб сторінки</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">head</div>
+            <div class="tag-description">Блок для службової інформації</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">body</div>
+            <div class="tag-description">Назва вікна сторінки</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">title</div>
+            <div class="tag-description">Відображає назву сторінки</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">h1-6</div>
+            <div class="tag-description">Заголовки різних рівнів</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">p</div>
+            <div class="tag-description">Заголовки параграфів</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">ul/ol</div>
+            <div class="tag-description">Нумеровий(ol) та ненумеровий(ul) списки</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">li</div>
+            <div class="tag-description">Елементи списків</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">img</div>
+            <div class="tag-description">Картинка</div>
+        </div>
+        <div class="tag-container">
+            <div class="tag-title">a</div>
+            <div class="tag-description">Посилання</div>
+        </div>
+    </section>
+    <footer id="contacts">
+  <div class="footer-main">
+    <div class="footer-block">
+      <h3>Навігація</h3>
+      <ul>
+        <li><a href="#welcome">Вітальне відео</a></li>
+        <li><a href="#about">Технології вебдизайну</a></li>
+        <li><a href="#tags">Пояснення тегів</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-block">
+      <h3>Про сайт</h3>
+      <p>
+        Сайт створено для ознайомлення з основами вебдизайну, HTML, CSS та JavaScript.<br>
+        Матеріали можна копіювати та використовувати без дозволу автора.
+      </p>
+    </div>
+
+    <div class="footer-block">
+      <h3>Контакти</h3>
+      <ul>
+        <li>Парфенюк Вікторія</li>
+        <li><a href="mailto:@24v_pvg@liceum.ztu.edu.ua" target="_blank">24v_pvg@liceum.ztu.edu.ua</a></li>
+        <li><a href="https://github.com/parfenyukviktoria" target="_blank">GitHub ⭐</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <b>© Парфенюк Вікторія</b> | Сайт "Коротко про вебдизайн"
+  </div>
+</footer>
+
+<nav class="main-nav">
+  <div class="nav-logo">Вебдизайн</div>
+  <ul class="nav-links">
+    <li><a href="#welcome">Вітальне відео</a></li>
+    <li><a href="#about">Технології</a></li>
+    <li><a href="#tags">Теги</a></li>
+    <li><a href="#contacts">Контакти</a></li>
+  </ul>
+</nav>
+
+    </body>
 </html>
